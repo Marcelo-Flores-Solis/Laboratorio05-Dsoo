@@ -225,7 +225,7 @@ public class Sistema {
         System.out.println(" Paciente " + nombrePaciente + " creado exitosamente.");        
     }
 
-    // --- Validadores al final del sistema ---
+
     private boolean validarNombreDoctor(String nombre) {
         if (nombre == null) return false;
         String s = nombre.trim();
@@ -273,7 +273,7 @@ public class Sistema {
             int y = Integer.parseInt(parts[2]);
             if (y < 1900 || parts[2].length() != 4) return false;
             if (m < 1 || m > 12) return false;
-            if (d < 1 || d > 31) return false; // validación simple, no considera meses con menos días
+            if (d < 1 || d > 31) return false; 
             return true;
         } catch (NumberFormatException ex) {
             return false;
@@ -282,7 +282,7 @@ public class Sistema {
 
     private boolean validarHora(String hora) {
         if (hora == null) return false;
-        // Formato HH:mm 00-23:00-59 (comprobación simple sin regex)
+        // Formato HH:mm 00-23:00-59 
         String[] parts = hora.split(":");
         if (parts.length != 2) return false;
         try {
