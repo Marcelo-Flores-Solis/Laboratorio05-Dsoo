@@ -27,12 +27,6 @@ public class Pacientes {
         System.out.println("DNI: " + dni);
     }
 
-    public void crearPaciente(int codigo, int dni, int edad, String nombre) {
-        this.codigo = codigo;
-        this.dni = dni;
-        this.edad = edad;
-        this.nombre = nombre;
-    }
 
     
 }
